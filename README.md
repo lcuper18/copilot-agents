@@ -46,15 +46,15 @@ git add .
 git commit -m "Initial commit with custom agents"
 
 # 2. Subir a GitHub (crea un repo llamado 'copilot-agents' en GitHub)
-git remote add origin git@github.com:TU_USUARIO/copilot-agents.git
+git remote add origin https://github.com/lcuper18/copilot-agents.git
 git push -u origin main
 
 # 3. En cualquier proyecto nuevo
 cd /ruta/tu/proyecto
-git submodule add git@github.com:TU_USUARIO/copilot-agents.git .github/agents
+git submodule add https://github.com/lcuper18/copilot-agents.git .github/agents
 # O simplemente clonar en la carpeta correcta:
 rm -rf .github/agents
-git clone git@github.com:TU_USUARIO/copilot-agents.git .github/agents-temp
+git clone https://github.com/lcuper18/copilot-agents.git .github/agents-temp
 mv .github/agents-temp/.github/agents .github/agents
 rm -rf .github/agents-temp
 ```
@@ -69,13 +69,13 @@ rm -rf .github/agents-temp
    git init
    git add .
    git commit -m "Initial commit"
-   git remote add origin git@github.com:TU_USUARIO/copilot-agents.git
+   git remote add origin https://github.com/lcuper18/copilot-agents.git
    git push -u origin main
    ```
 
 2. **En la otra computadora**: Clonar el repositorio
    ```bash
-   git clone git@github.com:TU_USUARIO/copilot-agents.git ~/my-copilot-agents
+   git clone https://github.com/lcuper18/copilot-agents.git ~/my-copilot-agents
    ```
 
 3. **Actualizar cambios**: Cuando modifiques un agente

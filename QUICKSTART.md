@@ -13,10 +13,7 @@
 ### Conectar y subir
 ```bash
 cd ~/my-copilot-agents
-git remote add origin git@github.com:TU_USUARIO/copilot-agents.git
-# O si usas HTTPS:
-# git remote add origin https://github.com/TU_USUARIO/copilot-agents.git
-
+git remote add origin https://github.com/lcuper18/copilot-agents.git
 git push -u origin main
 ```
 
@@ -24,9 +21,7 @@ git push -u origin main
 
 ### Clonar el repositorio
 ```bash
-git clone git@github.com:TU_USUARIO/copilot-agents.git ~/my-copilot-agents
-# O si usas HTTPS:
-# git clone https://github.com/TU_USUARIO/copilot-agents.git ~/my-copilot-agents
+git clone https://github.com/lcuper18/copilot-agents.git ~/my-copilot-agents
 ```
 
 ### Usar en un proyecto
