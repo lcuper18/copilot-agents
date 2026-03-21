@@ -74,6 +74,24 @@ Luego en la otra computadora simplemente:
 git pull
 ```
 
+## 5️⃣ Validación de Agentes
+
+Antes de subir cambios, puedes validar que los agentes tengan la estructura correcta:
+
+🔍 Validando 8 agentes...
+  ✅ QA.agent.md: OK
+  ✅ FrontendDev.agent.md: OK
+  ✅ ManagerProject.agent.md: OK
+  ✅ Ventas_software.agent.md: OK
+  ✅ DevOps.agent.md: OK
+  ✅ DataScience.agent.md: OK
+  ✅ CyberSecurity.agent.md: OK
+  ✅ ExpertSQL.agent.md: OK
+
+🎉 Todos los agentes son válidos.
+
+El script verificará que todos los archivos  tengan frontmatter YAML válido y los campos obligatorios.
+
 ## 💡 Recomendación
 
 - **Repositorio de plantillas** (`~/my-copilot-agents`): Para mantener tus agentes actualizados y reutilizables

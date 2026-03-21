@@ -5,19 +5,28 @@ Repositorio de plantillas con agentes personalizados de GitHub Copilot para reut
 ## 📋 Agentes Disponibles
 
 ### 1. **ExpertSQL** 
-Experto en bases de datos: diseño, consultas, optimización, migraciones y diagnóstico de rendimiento.
+Experto en bases de datos: diseño, consultas complejas, optimización, migraciones y diagnóstico de rendimiento. Incluye mejores prácticas para PostgreSQL, MySQL, SQL Server, SQLite.
 
 ### 2. **CyberSecurity**
-Especialista en seguridad: análisis de vulnerabilidades, mejores prácticas, auditoría de código y arquitectura segura.
+Especialista en seguridad: análisis de vulnerabilidades (OWASP Top 10), auditoría de código, arquitectura segura, threat modeling, compliance (GDPR, HIPAA, PCI-DSS).
 
 ### 3. **ManagerProject**
-Gestor de proyectos: análisis de documentación, verificación de consistencia, detección de inconsistencias.
+Gestor de proyectos: análisis de documentación, verificación de consistencia, detección de inconsistencias, propuesta de correcciones con autorización del usuario.
 
 ### 4. **QA**
-Aseguramiento de calidad: diseño de pruebas, validación, identificación de defectos y automatización.
+Aseguramiento de calidad: diseño de planes de prueba, automatización, reporte de defectos, revisión de código, integración CI/CD, métricas de calidad.
 
 ### 5. **Ventas_software**
-Especialista en ventas: pitches, páginas de ventas, cálculo de precios, modelos comerciales SaaS.
+Especialista en ventas de software SaaS: creación de pitches, estrategias de precios, páginas de ventas, modelos comerciales, investigación de mercado.
+
+### 6. **FrontendDev**
+Especialista en desarrollo frontend: frameworks modernos (React, Vue, Angular), diseño responsive, accesibilidad, optimización de rendimiento.
+
+### 7. **DevOps**
+Especialista en DevOps: CI/CD, contenedores (Docker, Kubernetes), cloud (AWS, Azure, GCP), infraestructura como código, monitorización.
+
+### 8. **DataScience**
+Especialista en ciencia de datos: análisis, visualización, machine learning, estadística, despliegue de modelos.
 
 ## 🚀 Instalación
 
@@ -84,7 +93,7 @@ rm -rf .github/agents-temp
    git add .
    git commit -m "Update agents"
    git push
-   
+    
    # En la otra computadora
    cd ~/my-copilot-agents
    git pull
@@ -109,7 +118,7 @@ bash ~/my-copilot-agents/install.sh
 name: NombreAgente
 description: Descripción breve del agente
 argument-hint: Qué tipo de entrada espera el agente
-tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'todo']
+tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
 ---
 
 # Instrucciones del agente
@@ -152,6 +161,49 @@ Una vez instalados en tu proyecto, puedes invocarlos en el chat de Copilot:
 @Ventas_software crea un pitch para este producto
 ```
 
+## 🏗️ Estructura de un Agente
+
+Cada agente es un archivo Markdown con un frontmatter YAML seguido de instrucciones.
+
+**Frontmatter obligatorio**:
+```yaml
+---
+name: NombreAgente
+description: Descripción clara del propósito del agente
+argument-hint: Qué tipo de entrada espera el agente (opcional pero recomendado)
+tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
+---
+```
+
+**Secciones de contenido**:
+- **Scope**: Áreas de expertise y responsabilidades.
+- **Working Rules**: Reglas de interacción, preguntas de contexto, formatos de respuesta.
+- **Methodologies/Templates**: Metodologías específicas, plantillas reutilizables.
+- **Best Practices**: Recomendaciones clave para el dominio.
+
+Consulta los agentes existentes como referencia.
+
+## 📝 Convenciones de Escritura
+
+- **Claridad**: Instrucciones específicas y no ambiguas.
+- **Ejemplos**: Incluir ejemplos concretos de uso y salidas esperadas.
+- **Herramientas**: Especificar solo las herramientas necesarias (lista simplificada).
+- **Idioma**: Usar español o inglés según el público objetivo, ser consistente.
+- **Formato**: Usar encabezados Markdown, listas, código con sintaxis adecuada.
+
+## 🧪 Pruebas y Validación
+
+Para probar un agente:
+1. Instálalo en un proyecto de prueba con `bash install.sh`.
+2. En VS Code, abre Copilot Chat y menciona al agente (`@NombreAgente`).
+3. Verifica que las respuestas sean coherentes con las instrucciones.
+
+Puedes usar el script `validate_agents.py` (ver sección de herramientas) para validar la sintaxis del frontmatter.
+
+## 🤝 Contribución
+
+¡Las contribuciones son bienvenidas! Por favor lee [CONTRIBUTING.md](CONTRIBUTING.md) para detalles sobre cómo proponer mejoras, reportar problemas o agregar nuevos agentes.
+
 ## 🔐 Notas de Seguridad
 
 - Los agentes no se sincronizan automáticamente con Settings Sync de VS Code
@@ -166,4 +218,4 @@ Una vez instalados en tu proyecto, puedes invocarlos en el chat de Copilot:
 
 ---
 
-**Última actualización**: Febrero 2026
+**Última actualización**: Marzo 2026

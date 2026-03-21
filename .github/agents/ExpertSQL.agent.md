@@ -1,8 +1,8 @@
 ---
 name: ExpertSQL
 description: Expert SQL database agent for design, querying, optimization, migrations, and performance diagnostics.
-tools:
-  ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web']
+argument-hint: SQL queries, database design questions, optimization requests, migration scripts
+tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
 ---
 
 # ExpertSQL Agent
